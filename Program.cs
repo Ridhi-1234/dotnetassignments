@@ -1,20 +1,22 @@
 ﻿using System;
-class Program
-{
-    static void Main(string[] args)
-    {
-        int a = 18;
-        int b = 6;
-        Pro_2.branching(a, b);
-        Pro_2.compare();
-        Pro_2.compare2();
-        Pro_2.ifElse();
-        Pro_2.ifElse2();
-        Pro_2.whileLoop();
-        Pro_2.doWhileLoop();
-        Pro_2.forLoop();
-        Pro_2.nestedLoop();
-        Pro_2.isDivsibleBy3();
+using Fraction_operation; 
 
-    }
-}
+ namespace Program 
+{ 
+    class Main_Program 
+    { 
+        public static void Main(){ 
+            Console.WriteLine("Enter the numerator : ");     
+                    int numerator = Convert.ToInt32(Console.ReadLine());        
+                         Console.WriteLine("Enter the denominator : ");    
+                                  int denominator = Convert.ToInt32(Console.ReadLine()); 
+              
+            Fraction F = new Fraction(numerator,denominator); 
+             
+            Console.WriteLine($"Floating point division result = {F.FloatingDivision()}"); 
+	         	F.IntegerDivison(); 
+	         	F.ReduceFraction(); 
+        } 
+    } 
+     
+} 
